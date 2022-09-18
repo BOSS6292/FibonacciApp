@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FibonacciApp</string>
+    <string name="no_account">Not Have Account? Sign Up</string>
+</resources>

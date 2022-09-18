@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "478551965659",
+    "project_id": "fibonacci-app-96fe5",
+    "storage_bucket": "fibonacci-app-96fe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478551965659:android:fa9c23812c67529e15b1fe",
+        "android_client_info": {
+          "package_name": "com.example.fibonacciapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478551965659-rf6dnbm6lbgu1lsqq0hi2es2b375se43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fibonacciapp",
+            "certificate_hash": "7e4d0acfd6d8b6c9c2e8b29492944cf99e114085"
+          }
+        },
+        {
+          "client_id": "478551965659-epeajmvvnqggrbmcmjs675loeraa5bdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Kw0Fb-jimBa4ImPYvSPJSQLwJpx9DCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478551965659-epeajmvvnqggrbmcmjs675loeraa5bdg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
