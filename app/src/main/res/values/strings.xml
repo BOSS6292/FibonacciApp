@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FibonacciApp</string>
     <string name="no_account">Not Have Account? Sign Up</string>
+    <string name="Heading">Fibonacci Number Generator</string>
+    <string name="EnterValue1">enter N value</string>
+    <string name="result">Result</string>
+    <string name="generate">Generate</string>
+    <string name="enter_n_value">enter N value</string>
 </resources>

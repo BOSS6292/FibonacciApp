@@ -7,10 +7,9 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import java.util.*
-
-
-lateinit var numberOne:Number
 
 class FibonacciActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,6 @@ class FibonacciActivity : AppCompatActivity() {
         val genFib2: Button = findViewById(R.id.genFib2)
         val getN: EditText = findViewById(R.id.getN)
         val getN2: EditText = findViewById(R.id.getN2)
-        val fibText: TextView = findViewById(R.id.text_view)
         val resultText: TextView = findViewById(R.id.resultOne)
         val resultTextTwo: TextView = findViewById(R.id.resultTwo)
 
@@ -39,7 +37,7 @@ class FibonacciActivity : AppCompatActivity() {
         genFib2.setOnClickListener {
             if (getN2.text.isNotEmpty()) {
                 val N: Int = getN2.text.toString().toInt()
-                resultTextTwo.text = nFib(N)
+                resultTextTwo.text = nFib2(N)
             } else {
                 resultTextTwo.text = "Not a valid value"
             }
@@ -58,4 +56,22 @@ class FibonacciActivity : AppCompatActivity() {
         }
         return nextFibo.toString()
 }
+
+    private fun nFib2(N: Int): String {
+        return if (N > 0) {
+            val result = LongArray(N)
+            result[1] = 1
+            result[0] = result[1]
+            for (i in 2 until N) {
+                result[i] = result[i - 1] + result[i - 2]
+            }
+
+            for (res in result) {
+                Log.d(TAG, res.toString())
+            }
+            result.contentToString()
+        } else {
+            "Not a valid value of N"
+        }
+    }
 }

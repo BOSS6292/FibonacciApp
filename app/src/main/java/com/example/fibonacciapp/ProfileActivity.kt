@@ -3,7 +3,9 @@ package com.example.fibonacciapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AlertDialog
 import com.example.fibonacciapp.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -59,5 +61,25 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(Intent(this,LoginActivity::class.java))
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this).apply {
+            setTitle("Please confirm.")
+            setMessage("Are you want to exit the app?")
+
+            setPositiveButton("Yes") { _, _ ->
+                // if user press yes, then finish the current activity
+                finish()
+                super.onBackPressed()
+            }
+
+            setNegativeButton("No"){_, _ ->
+                // if user press no, then return the activity
+                Toast.makeText(this@ProfileActivity,"Thank You!!", Toast.LENGTH_SHORT).show()
+            }
+
+            setCancelable(true)
+        }.create().show()
     }
 }

@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
 
         //init firebase
         firebaseAuth = FirebaseAuth.getInstance()
-        //checkUser()
+        checkUser()
 
         //handle click, register activity
         binding.noAccountTv.setOnClickListener {
@@ -96,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
 
                 //open profile
-                startActivity(Intent(this,FibonacciActivity::class.java))
+                startActivity(Intent(this,ProfileActivity::class.java))
                 finish()
             }
             .addOnFailureListener { e->
@@ -106,14 +106,14 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-   /* private fun checkUser() {
+   private fun checkUser() {
         //if user is already logged in go to profile activty
         //get current user
         val firebaseUser = firebaseAuth.currentUser
         if(firebaseUser != null)
         {
-            startActivity(Intent(this,FibonacciActivity::class.java))
+            startActivity(Intent(this,ProfileActivity::class.java))
             finish()
         }
-    }*/
+    }
 }

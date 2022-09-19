@@ -6,7 +6,7 @@
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".MainActivity"
         android:orientation="vertical"
         android:gravity="center_horizontal">
@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Fibonacci Number Generator"
+            android:text="@string/Heading"
             android:textSize="20sp"
             style="@style/TextAppearance.MaterialComponents.Caption"/>
 
@@ -26,8 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:ems="10"
-            android:hint="enter N value"
+            android:hint="@string/EnterValue1"
             android:inputType="number"/>
 
         <TextView
@@ -37,14 +36,14 @@
             android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:textSize="35sp"
-            android:text="Result"/>
+            android:text="@string/result"/>
 
         <Button
             android:id="@+id/genFib"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Generate" />
+            android:text="@string/generate" />
 
         <EditText
             android:id="@+id/getN2"
@@ -52,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:ems="10"
-            android:hint="enter N value"
+            android:hint="@string/enter_n_value"
             android:inputType="number"/>
 
         <TextView
@@ -61,14 +60,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:textStyle="bold"
-            android:textSize="35sp"
-            android:text="Result"/>
+            android:textSize="20sp"
+            android:text="@string/result"/>
 
         <Button
             android:id="@+id/genFib2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Generate" />
+            android:text="@string/generate" />
     </LinearLayout>
 </ScrollView>
